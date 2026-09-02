@@ -1,0 +1,15 @@
+{
+ "name": "Excellence Law Firm",
+ "short_name": "Excellence",
+ "icons": [
+  {
+   "src": "/apple-touch-icon.png",
+   "sizes": "180x180",
+   "type": "image/png"
+  }
+ ],
+ "theme_color": "#22262b",
+ "background_color": "#fbfaf7",
+ "display": "browser",
+ "start_url": "/"
+}
