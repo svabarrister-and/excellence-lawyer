@@ -344,9 +344,32 @@
   .ck-save-row{margin-top:18px;text-align:right}
 
   /* MODAL */
+  /* ХРОНОЛОГІЯ ПРАКТИКИ */
+  .tl{margin-top:64px;border-top:1px solid var(--line-soft);padding-top:34px}
+  .tl-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:20px;flex-wrap:wrap}
+  .tl-title{font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);font-weight:500}
+  .tl-nav{display:flex;align-items:center;gap:12px}
+  .tl-count{font-size:11.5px;letter-spacing:.1em;color:var(--muted);font-variant-numeric:tabular-nums;min-width:56px;text-align:center}
+  .tl-btn{width:30px;height:30px;border:1px solid var(--line);background:#fff;color:var(--ink-soft);border-radius:50%;cursor:pointer;font-size:13px;line-height:1;display:flex;align-items:center;justify-content:center;transition:all .3s;padding:0}
+  .tl-btn:hover{border-color:var(--gold);color:var(--gold)}
+  .tl-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .tl-track{display:flex;gap:1px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
+            background:var(--line-soft);border:1px solid var(--line-soft);
+            scrollbar-width:none;-ms-overflow-style:none}
+  .tl-track::-webkit-scrollbar{display:none}
+  .tl-track:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .tl-card{flex:0 0 calc((100% - 2px)/3);scroll-snap-align:start;background:var(--cream);
+           padding:22px 24px 24px;min-height:172px;display:flex;flex-direction:column;transition:background .4s}
+  .tl-card:hover{background:#fff}
+  .tl-date{font-size:10.5px;letter-spacing:.14em;color:var(--gold);font-weight:500;margin-bottom:10px;font-variant-numeric:tabular-nums}
+  .tl-t{font-family:var(--serif);font-size:15px;line-height:1.35;color:var(--ink);font-weight:500;margin-bottom:9px;letter-spacing:-.01em}
+  .tl-r{font-size:12.5px;line-height:1.6;color:var(--muted);font-weight:300;margin-top:auto}
+  .tl-note{margin-top:14px;font-size:11px;color:var(--muted);font-weight:300}
   .modal{position:fixed;inset:0;z-index:90;background:rgba(20,22,25,.55);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;padding:24px}
   .modal.show{display:flex;animation:fade .3s ease}
   @keyframes fade{from{opacity:0}to{opacity:1}}
+  @media(max-width:1000px) and (min-width:721px){.tl-card{flex:0 0 calc((100% - 1px)/2)}}
+  @media(prefers-reduced-motion:reduce){.tl-track{scroll-behavior:auto}}
   .modal-card{background:var(--paper);max-width:760px;width:100%;max-height:86vh;overflow-y:auto;border-radius:6px;padding:48px 52px;position:relative;box-shadow:0 40px 90px -30px rgba(0,0,0,.5)}
   .modal-card h3{font-size:32px;margin-bottom:8px}
   .modal-close{position:absolute;top:20px;right:22px;background:none;border:none;font-size:26px;line-height:1;color:var(--muted);cursor:pointer;padding:6px}
@@ -376,6 +399,8 @@
     .case{grid-template-columns:44px 1fr;gap:18px}
     .case .val{grid-column:2;text-align:left;margin-top:6px}
     .logos{grid-template-columns:repeat(2,1fr)}
+    .tl-card{flex:0 0 100%;min-height:158px;padding:20px}
+    .tl{margin-top:44px;padding-top:26px}
     .contact-grid{grid-template-columns:1fr;gap:44px}
     .cookie-main{flex-direction:column;align-items:flex-start;gap:18px}
     .modal-card{padding:36px 26px}
@@ -493,6 +518,19 @@
       <div class="case reveal"><div class="idx">05</div><div class="body"><h3 data-i18n="case5_h3">Спір із Фондом гарантування вкладів — ПАТ «VAB Bank»</h3><p data-i18n="case5_p">Відновлено права кредитора та забезпечено включення грошових вимог до реєстру акцептованих вимог кредиторів.</p></div><div class="val">₴33m<small data-i18n="case5_small">Вимоги</small></div></div>
       <div class="case reveal"><div class="idx">06</div><div class="body"><h3 data-i18n="case6_h3">Спір зернотрейдера за правилами GAFTA</h3><p data-i18n="case6_p">Представництво зернотрейдера у спорі щодо постачання; запобігнуто безпідставному утриманню вантажу на судні.</p></div><div class="val">₴25m<small data-i18n="case6_small">Вартість вантажу</small></div></div>
       <div class="case reveal"><div class="idx">07</div><div class="body"><h3 data-i18n="case7_h3">Розірвання оренди державного майна — захист інвестора</h3><p data-i18n="case7_p">Консультування щодо розірвання договору оренди державного майна із захистом інтересів інвестора.</p></div><div class="val">₴15m<small data-i18n="case7_small">Вартість договору</small></div></div>
+    </div>
+
+    <div class="tl reveal">
+      <div class="tl-head">
+        <span class="tl-title" data-i18n="tl_title">Хронологія практики</span>
+        <div class="tl-nav">
+          <button type="button" class="tl-btn" id="tlPrev" data-i18n-al="tl_prev" aria-label="Попередні">&#8592;</button>
+          <span class="tl-count" id="tlCount"></span>
+          <button type="button" class="tl-btn" id="tlNext" data-i18n-al="tl_next" aria-label="Наступні">&#8594;</button>
+        </div>
+      </div>
+      <div class="tl-track" id="tlTrack" tabindex="0" role="region" data-i18n-al="tl_region" aria-label="Хронологія практики"></div>
+      <p class="tl-note" data-i18n="tl_note">Відомості наведено в обсязі, оприлюдненому бюро. Реквізити проваджень не розкриваються.</p>
     </div>
   </div>
 </section>
@@ -625,6 +663,65 @@
   const FORM_PROCESSOR  = 'Web3Forms';
   const MAIL_TO         = 'sva@excellence.lawyer';
 
+  const NEWS = [
+    {d:'01.09.2017',uk:['Оренда приватних вагонів','Оформлено орендні відносини; річна орендна плата — 418 млн грн'],ru:['Аренда частных вагонов','Оформлены арендные отношения; годовая арендная плата — 418 млн грн'],en:['Lease of private rail wagons','Lease arrangements structured; annual rent UAH 418m']},
+    {d:'02.11.2017',uk:['Адміністративний суд · ФГВФО, ПАТ «ВіЕйБі Банк»','Поновлено права кредитора; грошові вимоги — понад 33 млн грн'],ru:['Административный суд · ФГВФЛ, ПАО «ВиЭйБи Банк»','Восстановлены права кредитора; требования — свыше 33 млн грн'],en:['Administrative court · Deposit Guarantee Fund, VAB Bank','Creditor rights restored; claims over UAH 33m']},
+    {d:'25.01.2018',uk:['Адміністративний суд · захист кредитора ПАТ «ВіЕйБі Банк»','Успішне представництво; загальна сума вимог — понад 30 млн грн'],ru:['Административный суд · защита кредитора ПАО «ВиЭйБи Банк»','Успешное представительство; сумма требований — свыше 30 млн грн'],en:['Administrative court · creditor of VAB Bank','Successful representation; total claims over UAH 30m']},
+    {d:'04.04.2018',uk:['Встановлення родинних зв\'язків іноземного громадянина','Успішне представництво; майновий інтерес — понад 54 млн грн'],ru:['Установление родственных связей иностранного гражданина','Успешное представительство; имущественный интерес — свыше 54 млн грн'],en:['Establishing family ties of a foreign national','Successful representation; property interest over UAH 54m']},
+    {d:'07.06.2018',uk:['Кримінальне провадження · ч. 1 ст. 286 КК України','Клієнта звільнено від кримінальної відповідальності судом першої інстанції'],ru:['Уголовное производство · ч. 1 ст. 286 УК Украины','Клиент освобождён от уголовной ответственности судом первой инстанции'],en:['Criminal proceedings · Art. 286(1) Criminal Code','Client released from criminal liability by the court of first instance']},
+    {d:'07.08.2018',uk:['Видача векселя та ризики векселедавця','Вексель видано; операційну діяльність клієнта не перервано'],ru:['Выдача векселя и риски векселедателя','Вексель выдан; операционная деятельность клиента не прервана'],en:['Issue of a promissory note and drawer\'s risks','Note issued; the client\'s operations continued uninterrupted']},
+    {d:'04.10.2018',uk:['МКАС при ТПП України · спір за договором поставки','Успішне представництво імпортера; сума спору — понад 200 млн грн'],ru:['МКАС при ТПП Украины · спор по договору поставки','Успешное представительство импортёра; сумма спора — свыше 200 млн грн'],en:['ICAC at the Ukrainian CCI · supply contract dispute','Successful representation of the importer; dispute value over UAH 200m']},
+    {d:'08.10.2018',uk:['Реорганізація центру первинної медико-санітарної допомоги','Надано правовий супровід реорганізації та зміни структури фінансування'],ru:['Реорганизация центра первичной медико-санитарной помощи','Предоставлено правовое сопровождение реорганизации и структуры финансирования'],en:['Reorganisation of a primary healthcare centre','Legal support for the reorganisation and funding restructure']},
+    {d:'13.06.2019',uk:['Київський апеляційний суд · іпотечне майно','Захищено права законного власника майна, що незаконно вибуло з володіння'],ru:['Киевский апелляционный суд · ипотечное имущество','Защищены права законного владельца имущества, незаконно выбывшего из владения'],en:['Kyiv Court of Appeal · mortgaged property','Rights of the lawful owner of unlawfully removed property upheld']},
+    {d:'04.07.2019',uk:['Дарницький райсуд Києва · нововиявлені обставини','Судовий наказ про стягнення боргу переглянуто'],ru:['Дарницкий райсуд Киева · вновь открывшиеся обстоятельства','Судебный приказ о взыскании долга пересмотрен'],en:['Darnytskyi District Court, Kyiv · newly discovered facts','Debt recovery order reviewed']},
+    {d:'05.07.2019',uk:['Шевченківський райсуд Києва · шахрайство в особливо великих розмірах','Позицію групи потерпілих підтримано судом'],ru:['Шевченковский райсуд Киева · мошенничество в особо крупных размерах','Позиция группы потерпевших поддержана судом'],en:['Shevchenkivskyi District Court, Kyiv · large-scale fraud','The position of the group of victims upheld by the court']},
+    {d:'21.08.2019',uk:['Доведення банку до неплатоспроможності','Доведено необхідність розкриття банківської таємниці; НБУ зобов\'язано надати документи'],ru:['Доведение банка до неплатёжеспособности','Доказана необходимость раскрытия банковской тайны; НБУ обязан предоставить документы'],en:['Bank driven to insolvency','Disclosure of banking secrecy established; the NBU ordered to produce documents']},
+    {d:'30.12.2019',uk:['Придбання вагонів-хоперів','Угоду супроводжено; сума договору — 8,4 млн доларів США'],ru:['Приобретение вагонов-хопперов','Сделка сопровождена; сумма договора — 8,4 млн долларов США'],en:['Acquisition of hopper wagons','Transaction supported; contract value USD 8.4m']},
+    {d:'17.01.2020',uk:['Спір із будівельною компанією · майнові права на квартиру','Спір виграно; права клієнта захищено'],ru:['Спор со строительной компанией · имущественные права на квартиру','Спор выигран; права клиента защищены'],en:['Dispute with a developer · property rights to an apartment','Dispute won; the client\'s rights upheld']},
+    {d:'28.01.2020',uk:['Передання вагонів в оренду','Угоду супроводжено; сума контракту — близько 35 млн грн'],ru:['Передача вагонов в аренду','Сделка сопровождена; сумма контракта — около 35 млн грн'],en:['Wagons leased out','Transaction supported; contract value approx. UAH 35m']},
+    {d:'13.03.2020',uk:['Південно-західний апеляційний госпсуд · борг за орендою','Стягнення на користь компанії — залізничного перевізника'],ru:['Юго-западный апелляционный хозсуд · долг по аренде','Взыскание в пользу компании — железнодорожного перевозчика'],en:['South-Western Commercial Court of Appeal · lease debt','Recovery in favour of a rail carrier']},
+    {d:'29.04.2020',uk:['Борг за договором оренди — 0,5 млн грн','Касація відмовила опоненту; рішення на користь клієнта залишено чинними'],ru:['Долг по договору аренды — 0,5 млн грн','Кассация отказала оппоненту; решения в пользу клиента оставлены в силе'],en:['Lease debt of UAH 0.5m','Cassation refused to open proceedings; rulings for the client stand']},
+    {d:'07.05.2020',uk:['Окружний адмінсуд Києва · податок на землю','Податкові повідомлення-рішення скасовано'],ru:['Окружной админсуд Киева · земельный налог','Налоговые уведомления-решения отменены'],en:['Kyiv District Administrative Court · land tax','Tax assessment notices annulled']},
+    {d:'18.05.2020',uk:['Госпсуд Києва · знаки для товарів і послуг','Опонентів зобов\'язано передати права на знаки законному власникові'],ru:['Хозсуд Киева · знаки для товаров и услуг','Оппонентов обязали передать права на знаки законному владельцу'],en:['Kyiv Commercial Court · trademarks','Opponents ordered to transfer the marks to the lawful owner']},
+    {d:'09.06.2020',uk:['Відновлення гонконгської компанії в реєстрі','Успішне представництво імпортера транспортних засобів'],ru:['Восстановление гонконгской компании в реестре','Успешное представительство импортёра транспортных средств'],en:['Restoration of a Hong Kong company to the register','Successful representation of a vehicle importer']},
+    {d:'07.08.2020',uk:['Неустойка за прострочення поставки вагонів','Стягнуто близько 1,3 млн грн'],ru:['Неустойка за просрочку поставки вагонов','Взыскано около 1,3 млн грн'],en:['Penalty for late delivery of wagons','Approx. UAH 1.3m recovered']},
+    {d:'14.08.2020',uk:['Оренда ресторанного приміщення в центрі Києва','Інтереси орендодавця відображено в договорі; ціна — близько 30 млн грн'],ru:['Аренда ресторанного помещения в центре Киева','Интересы арендодателя отражены в договоре; цена — около 30 млн грн'],en:['Lease of restaurant premises in central Kyiv','Landlord\'s interests secured in the contract; value approx. UAH 30m']},
+    {d:'20.10.2020',uk:['Шостий апеляційний адмінсуд · земельний податок','Вимоги податкових органів визнано безпідставними'],ru:['Шестой апелляционный админсуд · земельный налог','Требования налоговых органов признаны безосновательными'],en:['Sixth Administrative Court of Appeal · land tax','Tax authority\'s claims found unfounded']},
+    {d:'28.10.2020',uk:['Спір із фінансовою компанією · борг ~155 тис. доларів США','Підстав для вимог до клієнта не встановлено'],ru:['Спор с финансовой компанией · долг ~155 тыс. долларов США','Оснований для требований к клиенту не установлено'],en:['Dispute with a finance company · debt approx. USD 155k','No grounds for the claims against the client established']},
+    {d:'02.12.2020',uk:['Південно-західний апеляційний госпсуд · поставка вагонів','Успішне представництво оператора вагонних операцій'],ru:['Юго-западный апелляционный хозсуд · поставка вагонов','Успешное представительство оператора вагонных операций'],en:['South-Western Commercial Court of Appeal · wagon supply','Successful representation of a wagon operator']},
+    {d:'19.01.2021',uk:['Госпсуд Києва · корпоративні права','У позові колишньому власникові відмовлено'],ru:['Хозсуд Киева · корпоративные права','В иске бывшему собственнику отказано'],en:['Kyiv Commercial Court · corporate rights','The former owner\'s claim dismissed']},
+    {d:'25.01.2021',uk:['Купівля-продаж напіввагонів на умовах DAP','Угоду супроводжено для української логістичної компанії'],ru:['Купля-продажа полувагонов на условиях DAP','Сделка сопровождена для украинской логистической компании'],en:['Sale and purchase of open wagons on DAP terms','Transaction supported for a Ukrainian logistics company']},
+    {d:'03.02.2021',uk:['Спір з АТ «Ідея Банк» · споживче кредитування','Плату за надання інформації за договором визнано незаконною'],ru:['Спор с АО «Идея Банк» · потребительское кредитование','Плата за предоставление информации по договору признана незаконной'],en:['Dispute with Idea Bank · consumer lending','The information fee under the contract held unlawful']},
+    {d:'13.04.2021',uk:['Верховний Суд · захист приватного нотаріуса','Позов визнано таким, що не підлягає розгляду в адміністративному судочинстві'],ru:['Верховный Суд · защита частного нотариуса','Иск признан не подлежащим рассмотрению в административном судопроизводстве'],en:['Supreme Court · defence of a private notary','Claim held not to fall within administrative jurisdiction']},
+    {d:'21.04.2021',uk:['Придбання та оренда приміщення · SEAFOOD BAR «MUSHLYA»','Угоду супроводжено'],ru:['Приобретение и аренда помещения · SEAFOOD BAR «MUSHLYA»','Сделка сопровождена'],en:['Acquisition and lease of premises · SEAFOOD BAR MUSHLYA','Transaction supported']},
+    {d:'18.05.2021',uk:['Нежитлова нерухомість для Smidyuk Academy','Успішне представництво'],ru:['Нежилая недвижимость для Smidyuk Academy','Успешное представительство'],en:['Non-residential property for Smidyuk Academy','Successful representation']},
+    {d:'13.08.2021',uk:['Громадянство США для дітей, народжених від сурогатної матері','Успішне представництво громадян США і Великої Британії'],ru:['Гражданство США для детей, рождённых от суррогатной матери','Успешное представительство граждан США и Великобритании'],en:['US citizenship for children born to a surrogate','Successful representation of US and UK nationals']},
+    {d:'16.08.2021',uk:['Списання штрафних санкцій IT-компанії','Санкції та пеню списано податковою службою'],ru:['Списание штрафных санкций IT-компании','Санкции и пеня списаны налоговой службой'],en:['Write-off of penalties for an IT company','Penalties and interest written off by the tax service']},
+    {d:'15.09.2021',uk:['Приміщення для ресторану #БПШ, м. Ірпінь','Угоду супроводжено'],ru:['Помещение для ресторана #БПШ, г. Ирпень','Сделка сопровождена'],en:['Premises for the #BPSh restaurant, Irpin','Transaction supported']},
+    {d:'24.09.2021',uk:['Госпсуд Одеської області · штраф за поставку вагонів','Стягнуто штраф, витрати за ст. 625 ЦК України та упущену вигоду'],ru:['Хозсуд Одесской области · штраф за поставку вагонов','Взысканы штраф, расходы по ст. 625 ГК Украины и упущенная выгода'],en:['Odesa Commercial Court · penalty for wagon supply','Penalty, Art. 625 Civil Code costs and lost profit recovered']},
+    {d:'22.10.2021',uk:['Відновлювальний ремонт вагонів після оренди','Витрати орендодавця стягнуто за рішенням суду'],ru:['Восстановительный ремонт вагонов после аренды','Расходы арендодателя взысканы по решению суда'],en:['Restoration repair of wagons after lease','The lessor\'s costs recovered by court order']},
+    {d:'20.12.2021',uk:['Ліцензійний договір виробника алкогольної продукції','Чинність і обов\'язковість договору підтверджено'],ru:['Лицензионный договор производителя алкогольной продукции','Действительность и обязательность договора подтверждены'],en:['Licence agreement of an alcohol producer','Validity and binding force of the agreement confirmed']},
+    {d:'17.01.2022',uk:['Голосіївський райсуд Києва · виконавчий напис нотаріуса','Визнано таким, що не підлягає виконанню'],ru:['Голосеевский райсуд Киева · исполнительная надпись нотариуса','Признана не подлежащей исполнению'],en:['Holosiivskyi District Court, Kyiv · notary\'s writ of execution','Declared unenforceable']},
+    {d:'08.02.2022',uk:['Верховний Суд · продаж частки у статутному капіталі','Застосовано ст. 8 ЗУ «Про міжнародне приватне право»; інтереси учасника захищено'],ru:['Верховный Суд · продажа доли в уставном капитале','Применена ст. 8 ЗУ «О международном частном праве»; интересы участника защищены'],en:['Supreme Court · sale of a share in charter capital','Art. 8 of the Private International Law Act applied; member\'s interests upheld']},
+    {d:'25.04.2023',uk:['Захист боржника у кредитних відносинах','Нарахування після відступлення прав визнано безпідставними'],ru:['Защита должника в кредитных отношениях','Начисления после уступки прав признаны безосновательными'],en:['Defence of a borrower in credit relations','Charges after assignment of rights found unfounded']},
+    {d:'14.11.2023',uk:['Непоставлені меблі · захист прав споживачів','Пеню стягнуто в розмірі, що дорівнює вартості товару'],ru:['Непоставленная мебель · защита прав потребителей','Пеня взыскана в размере стоимости товара'],en:['Undelivered furniture · consumer protection','Penalty recovered equal to the value of the goods']},
+    {d:'16.07.2024',uk:['Знаки «НАША МАРКА» і «МЪРНАЯ»','Права законного володільця захищено в усіх інстанціях'],ru:['Знаки «НАША МАРКА» и «МЪРНАЯ»','Права законного владельца защищены во всех инстанциях'],en:['Trademarks NASHA MARKA and MYRNAYA','Rights of the lawful holder upheld at every instance']},
+    {d:'18.07.2024',uk:['INTERPOL HQ · запобігання протиправному затриманню','Підстави затримання клієнта спростовано'],ru:['INTERPOL HQ · предотвращение противоправного задержания','Основания задержания клиента опровергнуты'],en:['INTERPOL HQ · preventing unlawful detention','Grounds for the client\'s detention refuted']},
+    {d:'28.07.2025',uk:['Представництво швейцарської будівельної компанії','Представництво зареєстровано; банківський рахунок відкрито'],ru:['Представительство швейцарской строительной компании','Представительство зарегистрировано; банковский счёт открыт'],en:['Branch of a Swiss construction company','Branch registered; bank account opened']},
+    {d:'04.08.2025',uk:['Госпсуд Донецької області · вагони, втрачені через агресію','рф визнано винною та зобов\'язано відшкодувати збитки'],ru:['Хозсуд Донецкой области · вагоны, утраченные из-за агрессии','рф признана виновной и обязана возместить убытки'],en:['Donetsk Commercial Court · wagons lost to armed aggression','Russia found liable and ordered to compensate the losses']},
+    {d:'23.08.2025',uk:['Печерський райсуд Києва · строк ознайомлення з матеріалами','У клопотанні слідчого відмовлено; право на захист збережено'],ru:['Печерский райсуд Киева · срок ознакомления с материалами','В ходатайстве следователя отказано; право на защиту сохранено'],en:['Pecherskyi District Court, Kyiv · time to review case files','Investigator\'s motion refused; the right to defence preserved']},
+    {d:'25.08.2025',uk:['Фінансова підтримка родини акціонера холдингу','Врегульовано виплати родині та викуп частки за ринковою вартістю'],ru:['Финансовая поддержка семьи акционера холдинга','Урегулированы выплаты семье и выкуп доли по рыночной стоимости'],en:['Financial protection for a shareholder\'s family','Payments to the family and buy-out at fair market value settled']},
+    {d:'10.09.2025',uk:['Апеляція · ТОВ «ЖК «ПАРКОВИЙ»»','Стягнуто 1 012 333,80 грн інфляційних втрат і 185 163,22 грн річних'],ru:['Апелляция · ООО «ЖК «ПАРКОВЫЙ»»','Взыскано 1 012 333,80 грн инфляционных потерь и 185 163,22 грн годовых'],en:['Appeal · ZhK Parkovyi LLC','UAH 1,012,333.80 inflation losses and UAH 185,163.22 interest recovered']},
+    {d:'12.09.2025',uk:['Оренда комерційної нерухомості для магазину NOVUS','Договір укладено на умовах, що захищають орендодавця'],ru:['Аренда коммерческой недвижимости для магазина NOVUS','Договор заключён на условиях, защищающих арендодателя'],en:['Commercial lease for a NOVUS store','Lease concluded on terms protecting the landlord']},
+    {d:'18.09.2025',uk:['Новий напрям: нерухомість у Словацькій Республіці','Розширення практики бюро — від перевірки документів до реєстрації прав'],ru:['Новое направление: недвижимость в Словацкой Республике','Расширение практики бюро — от проверки документов до регистрации прав'],en:['New practice area: real estate in Slovakia','Practice extended from due diligence to registration of title']},
+    {d:'15.10.2025',uk:['Майновий комплекс швейної фабрики, Львівщина','Угоду завершено: сім будівель і земельна ділянка'],ru:['Имущественный комплекс швейной фабрики, Львовщина','Сделка завершена: семь зданий и земельный участок'],en:['Garment factory complex, Lviv region','Transaction completed: seven buildings and a land plot']},
+    {d:'26.10.2025',uk:['Донецький окружний адмінсуд · ППР зі штрафами з ПДВ','Позов задоволено повністю; повідомлення-рішення скасовано'],ru:['Донецкий окружной админсуд · НУР со штрафами по НДС','Иск удовлетворён полностью; уведомления-решения отменены'],en:['Donetsk District Administrative Court · VAT penalty notices','Claim granted in full; the notices annulled']},
+    {d:'10.11.2025',uk:['Госпсуд Донецької області · упущена вигода з рф','Позов задоволено повністю; стягнуто 1 257 411,60 доларів США'],ru:['Хозсуд Донецкой области · упущенная выгода с рф','Иск удовлетворён полностью; взыскано 1 257 411,60 долларов США'],en:['Donetsk Commercial Court · lost profit from Russia','Claim granted in full; USD 1,257,411.60 recovered']},
+    {d:'23.11.2025',uk:['Київський окружний адмінсуд · донарахування ДПС понад 2 млн грн','Скасовано всі чотири податкові повідомлення-рішення'],ru:['Киевский окружной админсуд · доначисления ГНС свыше 2 млн грн','Отменены все четыре налоговых уведомления-решения'],en:['Kyiv District Administrative Court · tax assessments over UAH 2m','All four assessment notices annulled']},
+    {d:'27.02.2026',uk:['Київський апеляційний суд · право власності на рухоме майно','Апеляційну скаргу задоволено повністю; майно клієнтки захищено'],ru:['Киевский апелляционный суд · право собственности на движимое имущество','Апелляционная жалоба удовлетворена полностью; имущество клиентки защищено'],en:['Kyiv Court of Appeal · title to movable property','Appeal granted in full; the client\'s property protected']},
+    {d:'31.08.2026',uk:['Аналітика: безпредикатна легалізація та позаконвікційне відмивання','Фахова публікація'],ru:['Аналитика: беспредикатная легализация и внеконвикционное отмывание','Профессиональная публикация'],en:['Analysis: non-predicate and non-conviction-based money laundering','Professional publication']}
+  ];
+
   const I18N = {
     uk: {
       nav_about:"Про нас",nav_services:"Послуги",nav_work:"Практика",nav_clients:"Клієнти",nav_cta:"Зв'язатися",
@@ -676,6 +773,8 @@
       proc_form_svc:"обробка звернень, надісланих через форму зв'язку; сервери у Сполучених Штатах Америки, зберігання надісланих повідомлень — до 30 днів.",
       proc_xfer_svc:"Дані, надіслані через форму зв'язку, обробляє постачальник сервісу форм на серверах у Сполучених Штатах Америки. Цей постачальник не надає стандартних договірних положень за Імплементаційним рішенням Комісії (ЄС) 2021/914, тому передавання здійснюється виключно на підставі прямої згоди суб'єкта даних (п. «a» ч. 1 ст. 49 GDPR), наданої перед надсиланням форми після інформування про відсутність рішення про належний рівень захисту та відповідних гарантій.",
       form_consent_svc:"Я надаю згоду на обробку моїх персональних даних відповідно до <a data-open-policy>Політики конфіденційності</a>, а також на передавання їх постачальнику сервісу форм зі зберіганням на серверах у США — країні, щодо якої Європейська Комісія не ухвалювала рішення про належний рівень захисту.",
+      tl_title:"Хронологія практики",tl_prev:"Попередні",tl_next:"Наступні",tl_region:"Хронологія практики",
+      tl_note:"Відомості наведено в обсязі, оприлюдненому бюро. Реквізити проваджень не розкриваються.",
       privacy_title:"Політика конфіденційності та cookie",
       privacy_body:`<p class="muted">Редакція від 03 вересня 2026 року · Версія 3.0</p>
 
@@ -806,6 +905,8 @@
       proc_form_svc:"обработка обращений, направленных через форму связи; серверы в Соединённых Штатах Америки, хранение направленных сообщений — до 30 дней.",
       proc_xfer_svc:"Данные, направленные через форму связи, обрабатывает поставщик сервиса форм на серверах в Соединённых Штатах Америки. Этот поставщик не предоставляет стандартных договорных положений по Имплементационному решению Комиссии (ЕС) 2021/914, поэтому передача осуществляется исключительно на основании прямого согласия субъекта данных (п. «a» ч. 1 ст. 49 GDPR), данного перед отправкой формы после информирования об отсутствии решения о надлежащем уровне защиты и соответствующих гарантий.",
       form_consent_svc:"Я даю согласие на обработку моих персональных данных в соответствии с <a data-open-policy>Политикой конфиденциальности</a>, а также на их передачу поставщику сервиса форм с хранением на серверах в США — стране, в отношении которой Европейская Комиссия не принимала решения о надлежащем уровне защиты.",
+      tl_title:"Хронология практики",tl_prev:"Предыдущие",tl_next:"Следующие",tl_region:"Хронология практики",
+      tl_note:"Сведения приведены в объёме, обнародованном бюро. Реквизиты производств не раскрываются.",
       privacy_title:"Политика конфиденциальности и cookie",
       privacy_body:`<p class="muted">Редакция от 03 сентября 2026 года · Версия 3.0</p>
 
@@ -936,6 +1037,8 @@
       proc_form_svc:"processing of enquiries submitted through the contact form; servers in the United States, submitted messages retained for up to 30 days.",
       proc_xfer_svc:"Data submitted through the contact form is processed by the form service provider on servers in the United States. That provider does not offer the standard contractual clauses adopted by Commission Implementing Decision (EU) 2021/914, so the transfer is made solely on the basis of the data subject's explicit consent (Art. 49(1)(a) GDPR), given before submitting the form after being informed of the absence of an adequacy decision and of appropriate safeguards.",
       form_consent_svc:"I consent to the processing of my personal data in accordance with the <a data-open-policy>Privacy Policy</a>, and to its transfer to the form service provider with storage on servers in the USA — a country for which the European Commission has adopted no adequacy decision.",
+      tl_title:"Practice timeline",tl_prev:"Previous",tl_next:"Next",tl_region:"Practice timeline",
+      tl_note:"Information is given as published by the firm. Case reference numbers are not disclosed.",
       privacy_title:"Privacy & Cookie Policy",
       privacy_body:`<p class="muted">Version 3.0 · 3 September 2026</p>
 
@@ -1030,6 +1133,8 @@
     document.querySelectorAll('[data-i18n]').forEach(el=>{const v=d[el.dataset.i18n];if(v!=null)el.textContent=v;});
     document.querySelectorAll('[data-i18n-html]').forEach(el=>{const v=d[el.dataset.i18nHtml];if(v!=null)el.innerHTML=v;});
     document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const v=d[el.dataset.i18nPh];if(v!=null)el.placeholder=v;});
+    document.querySelectorAll('[data-i18n-al]').forEach(el=>{const v=d[el.dataset.i18nAl];if(v!=null)el.setAttribute('aria-label',v);});
+    renderTimeline(lang);
     document.querySelectorAll('#langs button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
     fillPolicyProcessor(d);
     bindPolicyLinks();
@@ -1047,6 +1152,76 @@
     const lbl=document.querySelector('label[for="consent"]');
     if(lbl){const v=FORM_ACCESS_KEY?d.form_consent_svc:d.form_consent;if(v)lbl.innerHTML=v;}
   }
+  /* ---------- Хронологія практики ----------
+     Дані рендеряться з масиву NEWS (найновіші першими). Автопрокрутка
+     зупиняється при наведенні, фокусі та коли вкладку приховано; при
+     prefers-reduced-motion автопрокрутка не вмикається взагалі. */
+  const tlTrack=document.getElementById('tlTrack');
+  const tlCount=document.getElementById('tlCount');
+  let tlTimer=null, tlPaused=false;
+  const tlReduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function renderTimeline(lang){
+    if(!tlTrack)return;
+    const key=(lang==='ru'||lang==='en')?lang:'uk';
+    tlTrack.textContent='';
+    const frag=document.createDocumentFragment();
+    for(let i=NEWS.length-1;i>=0;i--){          // найновіші першими
+      const it=NEWS[i], card=document.createElement('article');
+      card.className='tl-card';
+      const dt=document.createElement('div'); dt.className='tl-date'; dt.textContent=it.d;
+      const h=document.createElement('h4');    h.className='tl-t';    h.textContent=it[key][0];
+      const p=document.createElement('p');     p.className='tl-r';    p.textContent=it[key][1];
+      card.appendChild(dt); card.appendChild(h); card.appendChild(p);
+      frag.appendChild(card);
+    }
+    tlTrack.appendChild(frag);
+    tlTrack.scrollLeft=0;
+    updateTlCount();
+  }
+
+  function tlPerView(){
+    const c=tlTrack&&tlTrack.querySelector('.tl-card');
+    if(!c)return 1;
+    return Math.max(1,Math.round(tlTrack.clientWidth/c.getBoundingClientRect().width));
+  }
+  function updateTlCount(){
+    if(!tlTrack||!tlCount)return;
+    const per=tlPerView(), total=NEWS.length;
+    const first=Math.round(tlTrack.scrollLeft/Math.max(1,tlTrack.scrollWidth/total))+1;
+    const last=Math.min(total,first+per-1);
+    tlCount.textContent=(per>1?first+'\u2013'+last:String(first))+' / '+total;
+  }
+  function tlStep(dir){
+    if(!tlTrack)return;
+    const max=tlTrack.scrollWidth-tlTrack.clientWidth;
+    let x=tlTrack.scrollLeft+dir*tlTrack.clientWidth;
+    if(x>max-2)x=dir>0?0:max;                   // по колу
+    if(x<0)x=max;
+    tlTrack.scrollTo({left:x,behavior:tlReduced?'auto':'smooth'});
+  }
+  function tlStart(){
+    if(tlReduced||tlTimer)return;
+    tlTimer=setInterval(()=>{ if(!tlPaused&&!document.hidden)tlStep(1); },5000);
+  }
+
+  if(tlTrack){
+    tlTrack.addEventListener('scroll',updateTlCount,{passive:true});
+    window.addEventListener('resize',updateTlCount);
+    ['mouseenter','focusin'].forEach(e=>tlTrack.addEventListener(e,()=>tlPaused=true));
+    ['mouseleave','focusout'].forEach(e=>tlTrack.addEventListener(e,()=>tlPaused=false));
+    tlTrack.addEventListener('keydown',e=>{
+      if(e.key==='ArrowRight'){e.preventDefault();tlStep(1);}
+      if(e.key==='ArrowLeft'){e.preventDefault();tlStep(-1);}
+    });
+    const pv=document.getElementById('tlPrev'), nx=document.getElementById('tlNext');
+    [pv,nx].forEach(b=>b&&['mouseenter','focus'].forEach(e=>b.addEventListener(e,()=>tlPaused=true)));
+    [pv,nx].forEach(b=>b&&['mouseleave','blur'].forEach(e=>b.addEventListener(e,()=>tlPaused=false)));
+    if(pv)pv.addEventListener('click',()=>tlStep(-1));
+    if(nx)nx.addEventListener('click',()=>tlStep(1));
+    tlStart();
+  }
+
   const PAGE_LANG='en';
   const LANG_PATH={uk:'/',ru:'/ru/',en:'/en/'};
   /* Separate URL per language (hreflang). A returning visitor with a saved
