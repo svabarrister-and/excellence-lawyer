@@ -7,7 +7,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://excellence.lawyer/ru/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://excellence.lawyer/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://excellence.lawyer/"/>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -17,7 +17,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://excellence.lawyer/ru/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://excellence.lawyer/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://excellence.lawyer/"/>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -27,8 +27,182 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://excellence.lawyer/ru/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://excellence.lawyer/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://excellence.lawyer/"/>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/zakryttia-spravy-za-davnistiu-satyra-na-zatiazhni-rozsliduvannia/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/zmina-kvalifikatsii-zlochynu-na-dosudovomu-rozsliduvanni-mezhi/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/zapysy-ord-pislia-reiestratsii-provadzhennia-v-ierdr/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/chomu-profesiinyi-zakhyst-u-sudi-koshtuie-hroshei/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/vykliuchennia-z-viiskovoho-obliku-nevnesennia-danykh-ttsk/</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/shcho-bude-z-biznesom-iakshcho-aktsioner-vybude-z-protsesu/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/zastosuvannia-zakonu-361-ix-do-kolyshnikh-publichnykh-diiachiv/</loc>
+    <lastmod>2023-10-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/status-pep-u-finmonitorynhu-rishennia-sudu/</loc>
+    <lastmod>2023-10-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/sudovi-vytraty-za-zlovzhyvannia-protsesualnymy-pravamy/</loc>
+    <lastmod>2021-12-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/vykliuchennia-fop-z-reiestru-platnykiv-iedynoho-podatku/</loc>
+    <lastmod>2021-12-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/zamina-vidpovidacha-v-apeliatsii/</loc>
+    <lastmod>2021-08-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/strok-prediavlennia-vykonavchoho-lysta-ta-praktyky-bankiv/</loc>
+    <lastmod>2021-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/status-publichnoho-diiacha-ta-diia-zakonu-v-chasi/</loc>
+    <lastmod>2021-03-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/dohovir-postachannia-na-elevator-ne-pidpysanyi-elevatorom/</loc>
+    <lastmod>2021-01-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/prodazh-korporatyvnykh-prav-ryzyky-pretenzii-tretikh-osib/</loc>
+    <lastmod>2021-01-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/vykup-kredytu-borzhnykom-opodatkuvannia-dyskontu/</loc>
+    <lastmod>2020-12-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/aresht-maina-v-interesakh-osoby-iaka-ne-bula-vlasnykom/</loc>
+    <lastmod>2020-12-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/stiahnennia-vytrat-na-pravovu-dopomohu-pidkhody-sudiv/</loc>
+    <lastmod>2020-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/aktsionerne-tovarystvo-dlia-it-proektu-chy-potribne-vono/</loc>
+    <lastmod>2020-02-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/perehliad-za-novovyiavlenymy-obstavynamy-sudovoho-nakazu/</loc>
+    <lastmod>2019-10-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/zemelnyi-podatok-dlia-vlasnykiv-nezhytlovykh-prymishchen/</loc>
+    <lastmod>2019-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/pravo-advokata-oznaiomliuvatysia-z-materialamy-chuzhoi-spravy/</loc>
+    <lastmod>2019-05-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/vidshkoduvannia-pdv-lysty-dfs-i-norma-st-200-pk-ukrainy/</loc>
+    <lastmod>2019-04-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/prodazh-avtomobilia-za-dovirenistiu-ryzyk-vyznannia-pravochynu/</loc>
+    <lastmod>2019-02-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/strakhove-vidshkoduvannia-i-rehres/</loc>
+    <lastmod>2018-08-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/spilne-maino-podruzhzhia-koshty-vid-prodazhu-osobystoho-maina/</loc>
+    <lastmod>2018-03-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/chy-mozhe-kredytor-banku-shcho-pidliahaie-likvidatsii/</loc>
+    <lastmod>2017-12-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/elektronna-komertsiia-i-elektronni-hroshi/</loc>
+    <lastmod>2016-11-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

@@ -385,6 +385,24 @@
   .policy th,.policy td{border:1px solid var(--line-soft);padding:7px 9px;text-align:left;vertical-align:top;color:var(--ink-soft);font-weight:300}
   .policy th{background:var(--paper-3);font-family:var(--sans);font-weight:600;color:var(--ink);font-size:11.5px;letter-spacing:.03em}
 
+  /* ПУБЛІКАЦІЇ (блок на головній; сторінки статей мають власний CSS у pubs.py) */
+  .pubs{background:var(--paper-2)}
+  .pub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
+  .pub-grid[data-n="1"]{grid-template-columns:1fr}
+  .pub-grid[data-n="2"]{grid-template-columns:repeat(2,1fr)}
+  .pub-card{position:relative;background:var(--cream);padding:34px 32px 30px;display:flex;flex-direction:column;min-height:250px;transition:background .4s}
+  .pub-card:hover{background:#fff}
+  .pub-meta{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:14px;font-variant-numeric:tabular-nums}
+  .pub-lang{border:1px solid var(--line);border-radius:2px;padding:1px 6px;font-size:10px;letter-spacing:.1em;color:var(--muted)}
+  .pub-topic{color:var(--muted)}
+  .pub-card h3{font-size:23px;line-height:1.18;margin-bottom:12px}
+  .pub-card h3 a::after{content:"";position:absolute;inset:0}
+  .pub-card h3 a:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+  .pub-card p{color:var(--muted);font-size:14.5px;font-weight:300}
+  .pub-more{margin-top:auto;padding-top:22px;font-size:13px;color:var(--gold);letter-spacing:.03em}
+  .pub-foot{margin-top:34px}
+  @media(max-width:900px){.pub-grid,.pub-grid[data-n="2"]{grid-template-columns:1fr}.pub-card{min-height:0}}
+
   @media(max-width:900px){
     .menu{display:none}
     .burger{display:flex}
@@ -428,6 +446,7 @@
         <a href="#about" data-i18n="nav_about">Про нас</a>
         <a href="#services" data-i18n="nav_services">Послуги</a>
         <a href="#work" data-i18n="nav_work">Практика</a>
+        <a href="#publications" data-i18n="nav_pub">Публікації</a>
         <a href="#clients" data-i18n="nav_clients">Клієнти</a>
       </nav>
       <div class="langs" id="langs">
@@ -535,6 +554,19 @@
   </div>
 </section>
 
+<!-- PUBLICATIONS -->
+<section class="pad pubs" id="publications">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="pub_eyebrow">Публікації</span>
+      <h2 data-i18n="pub_h2">Правова аналітика та публікації.</h2>
+      <p data-i18n="pub_p">Авторські матеріали адвоката Сергія Андрощука щодо практичних питань права. Мають інформаційний характер і не є юридичною консультацією.</p>
+    </div>
+    <div class="pub-grid" data-n="3"><article class="pub-card reveal"><div class="pub-meta"><time datetime="2026-10-01">01.10.2026</time><span class="pub-topic">Кримінальне право і процес</span></div><h3><a href="/publikatsii/zakryttia-spravy-za-davnistiu-satyra-na-zatiazhni-rozsliduvannia/">Закриття справи за давністю: сатира на затяжні розслідування</a></h3><p>Сатирична нотатка про розслідування, що тривають до спливу строків давності, і закриття проваджень без винних; наведено «поради слідству».</p><span class="pub-more" aria-hidden="true">Читати →</span></article><article class="pub-card reveal"><div class="pub-meta"><time datetime="2026-09-05">05.09.2026</time><span class="pub-topic">Кримінальне право і процес</span></div><h3><a href="/publikatsii/zmina-kvalifikatsii-zlochynu-na-dosudovomu-rozsliduvanni-mezhi/">Зміна кваліфікації злочину на досудовому розслідуванні: межі «попередності»</a></h3><p>Від категорії тяжкості залежать НСРД, застава й строки розслідування; розглянуто межі законної зміни кваліфікації та наслідки її пониження для особи.</p><span class="pub-more" aria-hidden="true">Читати →</span></article><article class="pub-card reveal"><div class="pub-meta"><time datetime="2026-07-05">05.07.2026</time><span class="pub-topic">Кримінальне право і процес</span></div><h3><a href="/publikatsii/zapysy-ord-pislia-reiestratsii-provadzhennia-v-ierdr/">Записи ОРД після реєстрації провадження в ЄРДР: допустимість доказів</a></h3><p>Матеріали ОРД, зібрані після внесення відомостей до ЄРДР без ухвали слідчого судді, недопустимі; змішаний запис слід визнавати недопустимим повністю.</p><span class="pub-more" aria-hidden="true">Читати →</span></article></div>
+    <div class="pub-foot reveal"><a href="/publikatsii/" class="btn-ghost" data-i18n="pub_all">Усі публікації →</a></div>
+  </div>
+</section>
+
 <!-- CLIENTS -->
 <section class="pad clients" id="clients">
   <div class="wrap">
@@ -605,6 +637,7 @@
       <div class="soc">
         <a href="https://www.facebook.com/excellence.law.firm" target="_blank" rel="noopener">Facebook</a>
         <a href="mailto:sva@excellence.lawyer">Email</a>
+        <a href="/publikatsii/" data-i18n="footer_pub">Публікації</a>
         <a data-open-policy data-i18n="footer_privacy">Політика конфіденційності</a>
         <a id="cookieSettingsLink" data-i18n="footer_cookies">Налаштування кукі</a>
       </div>
@@ -724,7 +757,10 @@
 
   const I18N = {
     uk: {
-      nav_about:"Про нас",nav_services:"Послуги",nav_work:"Практика",nav_clients:"Клієнти",nav_cta:"Зв'язатися",
+      nav_about:"Про нас",nav_services:"Послуги",nav_work:"Практика",nav_clients:"Клієнти",nav_cta:"Зв'язатися",nav_pub:"Публікації",
+      pub_eyebrow:"Публікації",pub_h2:"Правова аналітика та публікації.",
+      pub_p:"Авторські матеріали адвоката Сергія Андрощука щодо практичних питань права. Мають інформаційний характер і не є юридичною консультацією.",
+      pub_all:"Усі публікації →",footer_pub:"Публікації",
       hero_eyebrow:"Міжнародна юридична практика · Україна",
       hero_h1:"Excellence Law Firm досягає успіху <em>там, де інші</em> здаються.",
       hero_lead:"Точний, комерційно орієнтований юридичний супровід поза кордонами — глибока галузева спеціалізація та суворість англійського й українського права.",
@@ -779,7 +815,7 @@
       privacy_body:`<p class="muted">Редакція від 03 вересня 2026 року · Версія 3.0</p>
 
 <h4>1. Володілець персональних даних</h4>
-<p>Андрощук Сергій Вікторович, адвокат, який здійснює адвокатську діяльність індивідуально під комерційним позначенням «Excellence Law Firm» (далі — Бюро). Адреса: офіс 305 (13), вул. Глибочицька, 40-Б, 1-й під'їзд, м. Київ, 04052, Україна. Електронна пошта: <a href="mailto:sva@excellence.lawyer">sva@excellence.lawyer</a>.</p>
+<p>Андрощук Сергій Васильович, адвокат, який здійснює адвокатську діяльність індивідуально під комерційним позначенням «Excellence Law Firm» (далі — Бюро). Адреса: офіс 305 (13), вул. Глибочицька, 40-Б, 1-й під'їзд, м. Київ, 04052, Україна. Електронна пошта: <a href="mailto:sva@excellence.lawyer">sva@excellence.lawyer</a>.</p>
 <p>Посаду уповноваженої особи з питань захисту даних (DPO) не запроваджено: обробка не підпадає під випадки, визначені ст. 37 Регламенту (ЄС) 2016/679 (GDPR). Усі звернення надсилаються на зазначену адресу електронної пошти.</p>
 
 <h4>2. Категорії персональних даних</h4>
@@ -856,7 +892,10 @@
       privacy_close:"Закрити"
     },
     ru: {
-      nav_about:"О нас",nav_services:"Услуги",nav_work:"Практика",nav_clients:"Клиенты",nav_cta:"Связаться",
+      nav_about:"О нас",nav_services:"Услуги",nav_work:"Практика",nav_clients:"Клиенты",nav_cta:"Связаться",nav_pub:"Публикации",
+      pub_eyebrow:"Публикации",pub_h2:"Правовая аналитика и публикации.",
+      pub_p:"Авторские материалы адвоката Сергея Андрощука по практическим вопросам права. Носят информационный характер и не являются юридической консультацией.",
+      pub_all:"Все публикации →",footer_pub:"Публикации",
       hero_eyebrow:"Международная юридическая практика · Украина",
       hero_h1:"Excellence Law Firm добивается успеха <em>там, где другие</em> сдаются.",
       hero_lead:"Точное, коммерчески ориентированное юридическое сопровождение вне границ — глубокая отраслевая специализация и строгость английского и украинского права.",
@@ -911,7 +950,7 @@
       privacy_body:`<p class="muted">Редакция от 03 сентября 2026 года · Версия 3.0</p>
 
 <h4>1. Владелец персональных данных</h4>
-<p>Андрощук Сергей Викторович, адвокат, осуществляющий адвокатскую деятельность индивидуально под коммерческим обозначением «Excellence Law Firm» (далее — Бюро). Адрес: офис 305 (13), ул. Глубочицкая, 40-Б, 1-й подъезд, г. Киев, 04052, Украина. Электронная почта: <a href="mailto:sva@excellence.lawyer">sva@excellence.lawyer</a>.</p>
+<p>Андрощук Сергей Васильевич, адвокат, осуществляющий адвокатскую деятельность индивидуально под коммерческим обозначением «Excellence Law Firm» (далее — Бюро). Адрес: офис 305 (13), ул. Глубочицкая, 40-Б, 1-й подъезд, г. Киев, 04052, Украина. Электронная почта: <a href="mailto:sva@excellence.lawyer">sva@excellence.lawyer</a>.</p>
 <p>Должность уполномоченного по защите данных (DPO) не введена: обработка не подпадает под случаи, определённые ст. 37 Регламента (ЕС) 2016/679 (GDPR). Все обращения направляются на указанный адрес электронной почты.</p>
 
 <h4>2. Категории персональных данных</h4>
@@ -988,7 +1027,10 @@
       privacy_close:"Закрыть"
     },
     en: {
-      nav_about:"About",nav_services:"Services",nav_work:"Selected Work",nav_clients:"Clients",nav_cta:"Get in touch",
+      nav_about:"About",nav_services:"Services",nav_work:"Selected Work",nav_clients:"Clients",nav_cta:"Get in touch",nav_pub:"Publications",
+      pub_eyebrow:"Publications",pub_h2:"Legal analysis and publications.",
+      pub_p:"Articles by attorney Sergii Androshchuk on practical questions of law. Provided for information only; not legal advice.",
+      pub_all:"All publications →",footer_pub:"Publications",
       hero_eyebrow:"International Legal Practice · Ukraine",
       hero_h1:"Excellence Law Firm succeeds <em>where others</em> give up.",
       hero_lead:"Precise, commercially-minded counsel across borders — pairing deep industry focus with the rigour of English and Ukrainian law.",
@@ -1364,6 +1406,20 @@
       enqBtn.disabled=false; setStatus('form_err','err');
     }finally{ enqSending=false; }
   });
+
+  // Прямі посилання з підсторінок (статей): /#privacy відкриває політику,
+  // /#cookies — налаштування кукі. Інші мови: /ru/#privacy, /en/#cookies.
+  function openByHash(){
+    const h=location.hash;
+    if(h==='#privacy'){openPolicy();}
+    else if(h==='#cookies'){
+      const c=readConsent();
+      document.getElementById('ckAnalytics').checked=!!(c&&c.analytics);
+      showBanner();ckPanel.classList.add('show');
+    }
+  }
+  openByHash();
+  window.addEventListener('hashchange',openByHash);
 </script>
 </body>
 </html>
