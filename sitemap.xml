@@ -7,7 +7,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://excellence.lawyer/ru/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://excellence.lawyer/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://excellence.lawyer/"/>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -17,7 +17,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://excellence.lawyer/ru/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://excellence.lawyer/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://excellence.lawyer/"/>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -27,15 +27,27 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://excellence.lawyer/ru/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://excellence.lawyer/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://excellence.lawyer/"/>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://excellence.lawyer/publikatsii/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/prodovzhennia-pobytu-dlia-pidpryiemtsia-v-slovachchyni/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://excellence.lawyer/publikatsii/kupyv-kvartyru-a-yii-vytrebuiut/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://excellence.lawyer/publikatsii/pravylo-39-yespl-zupynennia-ekstradytsii/</loc>
