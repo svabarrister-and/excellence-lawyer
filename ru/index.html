@@ -49,7 +49,8 @@
    "email": "sva@excellence.lawyer",
    "telephone": [
     "+380672437041",
-    "+447760160559"
+    "+447760160559",
+    "+421952092284"
    ],
    "foundingDate": "2016",
    "address": {
@@ -59,6 +60,32 @@
     "postalCode": "04052",
     "addressCountry": "UA"
    },
+   "location": [
+    {
+     "@type": "Place",
+     "name": "Excellence Law Firm — Киев",
+     "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Глубочицкая, 40-Б, офис 305 (13), 1-й подъезд",
+      "addressLocality": "Киев",
+      "postalCode": "04052",
+      "addressCountry": "UA"
+     },
+     "hasMap": "https://www.google.com/maps/search/?api=1&query=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%93%D0%BB%D0%B8%D0%B1%D0%BE%D1%87%D0%B8%D1%86%D1%8C%D0%BA%D0%B0%2C%2040%D0%91%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2004052%2C%20%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0"
+    },
+    {
+     "@type": "Place",
+     "name": "Excellence Law Firm — Bratislava",
+     "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bajkalská 55B",
+      "addressLocality": "Bratislava",
+      "postalCode": "821 05",
+      "addressCountry": "SK"
+     },
+     "hasMap": "https://www.google.com/maps/search/?api=1&query=Bajkalsk%C3%A1%2055B%2C%20821%2005%20Bratislava%2C%20Slovakia"
+    }
+   ],
    "areaServed": [
     {
      "@type": "Country",
@@ -67,6 +94,10 @@
     {
      "@type": "Country",
      "name": "United Kingdom"
+    },
+    {
+     "@type": "Country",
+     "name": "Slovakia"
     }
    ],
    "availableLanguage": [
@@ -296,6 +327,9 @@
   .cl .k{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
   .cl a,.cl .v{font-family:var(--serif);font-size:22px}
   .cl .addr{font-size:16px;font-family:var(--sans);color:var(--muted)}
+  .cl a.addr{text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px;transition:color .3s,text-decoration-color .3s}
+  .cl a.addr::after{content:" ↗";color:var(--gold)}
+  .cl a.addr:hover{color:var(--gold);text-decoration-color:var(--gold)}
   .form{background:var(--cream);border:1px solid var(--line);padding:40px;box-shadow:0 24px 60px -40px rgba(34,38,43,.3)}
   .form label.fl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px}
   .form input,.form textarea{width:100%;border:none;border-bottom:1px solid var(--line);background:transparent;padding:10px 0;font-family:var(--sans);font-size:15px;margin-bottom:24px;color:var(--ink)}
@@ -577,7 +611,7 @@
     </div>
     <div class="logos">
       <div class="logo-cell reveal"><a href="https://pharmatrade.com.ua/" target="_blank" rel="noopener noreferrer" title="pharmatrade.com.ua"><span>PharmaTrade</span></a></div>
-      <div class="logo-cell reveal"><span>Green Stripe</span></div>
+      <div class="logo-cell reveal"><a href="https://ekomolprodukt.com.ua/ua/" target="_blank" rel="noopener noreferrer" title="ekomolprodukt.com.ua"><span>ЕМП</span></a></div>
       <div class="logo-cell reveal"><a href="https://fmsu.org/" target="_blank" rel="noopener noreferrer" title="fmsu.org"><span>FMSU</span></a></div>
       <div class="logo-cell reveal"><a href="https://www.solutionmentors.com/" target="_blank" rel="noopener noreferrer" title="www.solutionmentors.com"><span>Solution Mentors</span></a></div>
       <div class="logo-cell reveal"><a href="https://miol.com.ua/" target="_blank" rel="noopener noreferrer" title="miol.com.ua"><span>MIOL</span></a></div>
@@ -604,8 +638,10 @@
       <div class="contact-lines">
         <div class="cl"><span class="k" data-i18n="contact_k_kyiv">Україна</span><a href="tel:+380672437041">+380 67 243 7041</a></div>
         <div class="cl"><span class="k" data-i18n="contact_k_uk">Велика Британія</span><a href="tel:+447760160559">+44 77 6016 0559</a></div>
+        <div class="cl"><span class="k" data-i18n="contact_k_sk">Словаччина</span><a href="tel:+421952092284">+421 95 209 2284</a></div>
         <div class="cl"><span class="k" data-i18n="contact_k_email">Ел. пошта</span><a href="mailto:sva@excellence.lawyer">sva@excellence.lawyer</a></div>
-        <div class="cl"><span class="k" data-i18n="contact_k_office">Офіс</span><span class="addr" data-i18n="contact_office">Офіс 305 (13), вул. Глибочицька, 40-Б, 1-й під'їзд, Київ, 04052, Україна</span></div>
+        <div class="cl"><span class="k" data-i18n="contact_k_office">Офіс в Україні</span><a class="addr" id="addrKyiv" href="https://www.google.com/maps/search/?api=1&amp;query=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%93%D0%BB%D0%B8%D0%B1%D0%BE%D1%87%D0%B8%D1%86%D1%8C%D0%BA%D0%B0%2C%2040%D0%91%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2004052%2C%20%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0" target="_blank" rel="noopener noreferrer" data-i18n="contact_office" data-i18n-title="contact_map" title="Відкрити на Google Картах">Офіс 305 (13), вул. Глибочицька, 40-Б, 1-й під'їзд, Київ, 04052, Україна</a></div>
+        <div class="cl"><span class="k" data-i18n="contact_k_office_sk">Офіс у Словаччині</span><a class="addr" id="addrBratislava" href="https://www.google.com/maps/search/?api=1&amp;query=Bajkalsk%C3%A1%2055B%2C%20821%2005%20Bratislava%2C%20Slovakia" target="_blank" rel="noopener noreferrer" data-i18n="contact_office_sk" data-i18n-title="contact_map" title="Відкрити на Google Картах">Bajkalská 55B, 821 05 Bratislava, Словаччина</a></div>
       </div>
     </div>
     <form class="form reveal" id="enquiry">
@@ -790,7 +826,7 @@
       case7_h3:"Розірвання оренди державного майна — захист інвестора",case7_p:"Консультування щодо розірвання договору оренди державного майна із захистом інтересів інвестора.",case7_small:"Вартість договору",
       clients_eyebrow:"Нам довіряють",clients_h2:"Компанії, які нам довіряють.",clients_p:"Від агросектору й фармацевтики до технологій і будівництва — клієнти покладаються на Excellence Law Firm у справах з найвищими ставками.",
       contact_eyebrow:"Зв'язатися",contact_h2:"Обговоримо вашу справу.",contact_lead:"Опишіть ситуацію. Excellence Law Firm оцінить позицію та запропонує шлях вперед — чітко і без зобов'язань.",
-      contact_k_kyiv:"Україна",contact_k_uk:"Велика Британія",contact_k_email:"Ел. пошта",contact_k_office:"Офіс",contact_office:"Офіс 305 (13), вул. Глибочицька, 40-Б, 1-й під'їзд, Київ, 04052, Україна",
+      contact_k_kyiv:"Україна",contact_k_uk:"Велика Британія",contact_k_sk:"Словаччина",contact_k_email:"Ел. пошта",contact_k_office:"Офіс в Україні",contact_k_office_sk:"Офіс у Словаччині",contact_office_sk:"Bajkalská 55B, 821 05 Bratislava, Словаччина",contact_map:"Відкрити на Google Картах",contact_office:"Офіс 305 (13), вул. Глибочицька, 40-Б, 1-й під'їзд, Київ, 04052, Україна",
       form_name:"Ім'я та прізвище",form_name_ph:"Ваше ім'я",form_email:"Ел. пошта",form_email_ph:"you@company.com",form_matter:"Ваша справа",form_matter_ph:"Стисло опишіть ситуацію",
       form_consent:"Я надаю згоду на обробку моїх персональних даних відповідно до <a data-open-policy>Політики конфіденційності</a>.",
       form_btn:"Надіслати звернення",form_thanks:"Дякуємо — ми зв'яжемося з вами.",
@@ -925,7 +961,7 @@
       case7_h3:"Расторжение аренды государственного имущества — защита инвестора",case7_p:"Консультирование по расторжению договора аренды государственного имущества с защитой интересов инвестора.",case7_small:"Стоимость договора",
       clients_eyebrow:"Нам доверяют",clients_h2:"Компании, которые нам доверяют.",clients_p:"От агросектора и фармацевтики до технологий и строительства — клиенты полагаются на Excellence Law Firm в делах с наивысшими ставками.",
       contact_eyebrow:"Связаться",contact_h2:"Обсудим ваше дело.",contact_lead:"Опишите ситуацию. Excellence Law Firm оценит позицию и предложит путь вперёд — чётко и без обязательств.",
-      contact_k_kyiv:"Украина",contact_k_uk:"Великобритания",contact_k_email:"Эл. почта",contact_k_office:"Офис",contact_office:"Офис 305 (13), ул. Глубочицкая, 40-Б, 1-й подъезд, Киев, 04052, Украина",
+      contact_k_kyiv:"Украина",contact_k_uk:"Великобритания",contact_k_sk:"Словакия",contact_k_email:"Эл. почта",contact_k_office:"Офис в Украине",contact_k_office_sk:"Офис в Словакии",contact_office_sk:"Bajkalská 55B, 821 05 Bratislava, Словакия",contact_map:"Открыть в Google Картах",contact_office:"Офис 305 (13), ул. Глубочицкая, 40-Б, 1-й подъезд, Киев, 04052, Украина",
       form_name:"Имя и фамилия",form_name_ph:"Ваше имя",form_email:"Эл. почта",form_email_ph:"you@company.com",form_matter:"Ваше дело",form_matter_ph:"Кратко опишите ситуацию",
       form_consent:"Я даю согласие на обработку моих персональных данных в соответствии с <a data-open-policy>Политикой конфиденциальности</a>.",
       form_btn:"Отправить обращение",form_thanks:"Спасибо — мы свяжемся с вами.",
@@ -1060,7 +1096,7 @@
       case7_h3:"Termination of a state-property lease — investor protection",case7_p:"Advised on the termination of a lease of state property, protecting the investor's interest.",case7_small:"Contract value",
       clients_eyebrow:"Trusted by",clients_h2:"Companies that trust us.",clients_p:"From agriculture and pharma to technology and construction, clients rely on Excellence Law Firm for matters where the stakes are highest.",
       contact_eyebrow:"Get in touch",contact_h2:"Let's discuss your matter.",contact_lead:"Tell us where things stand. Excellence Law Firm will assess the position and propose a route forward — clearly and without obligation.",
-      contact_k_kyiv:"Ukraine",contact_k_uk:"United Kingdom",contact_k_email:"Email",contact_k_office:"Office",contact_office:"Office 305 (13), Hlybochytska St. 40-B, entrance 1, Kyiv, 04052, Ukraine",
+      contact_k_kyiv:"Ukraine",contact_k_uk:"United Kingdom",contact_k_sk:"Slovakia",contact_k_email:"Email",contact_k_office:"Office in Ukraine",contact_k_office_sk:"Office in Slovakia",contact_office_sk:"Bajkalská 55B, 821 05 Bratislava, Slovakia",contact_map:"Open in Google Maps",contact_office:"Office 305 (13), Hlybochytska St. 40-B, entrance 1, Kyiv, 04052, Ukraine",
       form_name:"Full name",form_name_ph:"Your name",form_email:"Email",form_email_ph:"you@company.com",form_matter:"Your matter",form_matter_ph:"Briefly describe your situation",
       form_consent:"I consent to the processing of my personal data in accordance with the <a data-open-policy>Privacy Policy</a>.",
       form_btn:"Send enquiry",form_thanks:"Thank you — we will be in touch.",
@@ -1176,6 +1212,7 @@
     document.querySelectorAll('[data-i18n-html]').forEach(el=>{const v=d[el.dataset.i18nHtml];if(v!=null)el.innerHTML=v;});
     document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const v=d[el.dataset.i18nPh];if(v!=null)el.placeholder=v;});
     document.querySelectorAll('[data-i18n-al]').forEach(el=>{const v=d[el.dataset.i18nAl];if(v!=null)el.setAttribute('aria-label',v);});
+    document.querySelectorAll('[data-i18n-title]').forEach(el=>{const v=d[el.dataset.i18nTitle];if(v!=null)el.title=v;});
     renderTimeline(lang);
     document.querySelectorAll('#langs button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
     fillPolicyProcessor(d);
